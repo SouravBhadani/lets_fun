@@ -1,0 +1,23 @@
+<%= form_for(@blog, :html => { :role => "form" }) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title,:class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc ,:class=>"form-control"%>
+  </div>
+  <div class="form-group" id="sandbox-container">
+    <%= f.label :published_on %><br>
+    <%= f.text_field :published_on ,:class=>"form-control"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit",:class=>"btn btn-default"%>
+  </div>
+<% end %>
+
+ <script type="text/javascript">
+      $(document).ready(function(e) {
+                $('#sandbox-container input').datepicker({});
+              });
+</script>
